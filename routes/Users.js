@@ -31,11 +31,11 @@ users.post('/register', (req,res) => {
 						res.json({status: user.email + ' registerd.'})
 					})
 					.catch(err=>{
-						res.send('error: ' + err);
+						res.status(400).send('error: ' + err);
 					})
 			})
 		} else {
-			res.json({error: 'User is already registered'})
+			res.status(400).json({error: 'User is already registered'})
 		}
 	})
 	.catch(err => {
@@ -63,10 +63,10 @@ users.post('/login', (req, res) => {
 				res.send(token)
 
 			}else{
-				res.json({error: 'User does not exist.'})
+				res.status(400).json({error: 'User does not exist.'})
 			}
 		} else{
-			res.json({error: 'User does not exist.'})
+			res.status(400).json({error: 'User does not exist.'})
 		}
 	})
 	.catch(err=>{

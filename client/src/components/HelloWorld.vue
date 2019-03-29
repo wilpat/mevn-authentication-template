@@ -23,7 +23,6 @@
           <a href="https://community.vuetifyjs.com" target="_blank">Discord Community</a>
         </p>
       </v-flex>
-
       <v-flex
         mb-5
         xs12
